@@ -1,0 +1,113 @@
+@CHARSET "UTF-8";
+.sbHolder{
+	background-color: #fff;
+	border: solid 1px #9f9f9f;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	height: 21px;
+	position: relative;
+	width: 200px;
+    float: left;
+    margin: 0 8px 0 0;
+}
+.sbHolder:focus .sbSelector{
+	
+}
+.sbSelector{
+	display: block;
+	height: 21px;
+	left: 0;
+	line-height: 21px;
+	outline: none;
+	overflow: hidden;
+	position: absolute;
+	text-indent: 10px;
+	top: 0;
+	width: 180px;
+}
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{
+	color: #5a5a5a;
+	outline: none;
+	text-decoration: none;
+}
+.sbToggle{
+	/*background: url(../images/select-icons.png) 0 -116px no-repeat;*/
+    background: url(../images/select-arr-down.png) 0 50% no-repeat;
+	display: block;
+	height: 21px;
+	outline: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20px;
+}
+.sbToggle:hover{
+	background: url(../images/select-arr-down.png) 0 50% no-repeat;
+}
+.sbToggleOpen{
+	background: url(../images/select-arr-up.png) 0 50% no-repeat;
+}
+.sbToggleOpen:hover{
+	background: url(../images/select-arr-up.png) 0 50% no-repeat;
+}
+.sbHolderDisabled{
+	background-color: #fff;
+	border: solid 1px #9f9f9f;
+}
+.sbHolderDisabled .sbHolder{
+	
+}
+.sbHolderDisabled .sbToggle{
+	
+}
+.sbOptions{
+	background-color: #fff;
+	border: solid 1px #9f9f9f;
+	list-style: none;
+	left: -1px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	width: 200px;
+	z-index: 1;
+	overflow-y: auto;
+}
+.sbOptions li{
+	padding: 0 7px;
+}
+.sbOptions a{
+	border-bottom: dotted 1px #9f9f9f;
+	display: block;
+	outline: none;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions a:link, .sbOptions a:visited{
+	color: #5a5a5a;
+	text-decoration: none;
+}
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+	color: #5a5a5a;
+}
+.sbOptions li.last a{
+	border-bottom: none;
+}
+.sbOptions .sbDisabled{
+	border-bottom: dotted 1px #9f9f9f;
+	color: #999;
+	display: block;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbGroup{
+	border-bottom: dotted 1px #9f9f9f;
+	color: #EBB52D;
+	display: block;
+	font-weight: bold;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbSub{
+	padding-left: 17px;
+}

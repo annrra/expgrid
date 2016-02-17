@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=1000, initial-scale=1"/>
+        <link href='css/style.css' rel='stylesheet' type='text/css' />
+        <link href='css/tabs.css' rel='stylesheet' type='text/css' />
+        <link href='css/custom.css' rel='stylesheet' type='text/css' />
+        <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
+        <link href="css/selectbox.css" type="text/css" rel="stylesheet" />
+        <link href="css/jquery.ui.datepicker.css" type="text/css" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        
+                
+        <!-- JS libraries and helpers -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script src="js/functions_animations.js"></script>
+        
+        <script src="js/functions_charts_9.js"></script>
+        <script src="js/functions_charts_3.js"></script>
+                
+        <script src="js/jquery.tablesorter.js"></script>
+        
+		<script src="js/highcharts_rangeselect.js"></script>
+        <script src="js/highstock.js"></script>
+        <script src="js/exporting.js"></script>
+        
+        <script src="js/smoothscroll/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+	    <script src="js/smoothscroll/jquery.mousewheel.min.js" type="text/javascript"></script>
+	    <script src="js/smoothscroll/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/jquery.selectbox-0.2.min.js"></script>        
+        
+        <script type="text/javascript">
+			$(document).ready(function() {
+                $(".spoSelect").selectbox();
+                $(".rsSelect").selectbox();
+    		});
+		</script>
+        
+        
+		<title>Blank prototype</title>
+	</head>
+	<body>
+    	<div class="headerWrapper">
+            <div class="topWrapper">
+                <div id="logo"><a href="#">expand grid</a></div>
+            </div>
+            <div class="msFixed">
+            <div class="menuWrap">
+    			<div id="menu_holder">
+                	<ul class="main_menu">
+	                    <li class="home"><a href="index.html"><i class="fa fa-home"></i></a></li>
+                    	<li><a href="index.html">fruitcake donut</a></li>
+                        <li><a href="index.html">jelly-o</a></li>
+                        <li><a href="index.html">chupa chups</a></li>
+                        <li><a href="#">halvah</a>
+                            <ul class="subMenu">
+                                <li><a href="index.html">topping jelly beans</a></li>
+                                <li><a href="index.html">roll muffin</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html">caramels</a></li>
+                        <li><a href="index.html">carrot cake</a></li>                                                 
+                        <li><a href="index.html">apple pie</a></li>                                                                   
+                    </ul>
+                </div>
+            </div>
+            <div class="scrlTxtWrap">
+                <div class="scrlTxt">
+                    <div id="scrollingText">
+                        <div class="scrollWrapper">
+                            <div class="scrollableArea" style="width: 6643px;">
+                                <p>Marge, it takes two to lie. One to lie and one to listen.</p>
+                                <p>When will I learn? The answers to life's problems aren't at the bottom of a bottle, they're on TV!</p>
+                                <p>Dear Mr. President, There are too many states nowadays. Please, eliminate three. P.S. I am not a crackpot.</p>
+                                <p>I'm a Spalding Gray in a Rick Dees world.</p>
+                                <p>I'll be back. You can't keep the Democrats out of the White House forever, and when they get in, I'm back on the streets, with all my criminal buddies.</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="main">
+			<div id="page_content">
+                <div class="sub_section" id="intro">
+                    <h1>Stan Lee never left. I'm afraid his mind is no longer in mint condition.</h1>
+                    <p>The Internet King? I wonder if he could provide faster nudity… Ahoy hoy? Don't kid yourself, Jimmy. If a cow ever got the chance, he'd eat you and everyone you care about! Your guilty consciences may make you vote Democratic, but secretly you all yearn for a Republican president to lower taxes, brutalize criminals, and rule you like a king!</p>
+                </div>
+                
+                <div class="sGraphWrapper">
+                   
+                </div> 
+                
+                           
+                <div class="expandPrev">
+                    <div class="expRow">
+                        <div class="expBlock">
+                            <div class="expThumb" data-num="1">
+                                <img src="images/cntimg01.jpg" alt="news 01" />
+                                <h4>Heh-haa!</h4>
+                                <span>I'm nobody's taxi service; I'm not gonna be there to catch you every time you feel like jumping out of a spaceship.</span>
+                            </div>
+                        </div>
+                        <div class="expBlock">
+                            <div class="expThumb" data-num="2">
+                                <img src="images/cntimg02.jpg" alt="news 01"/>
+                                <h4>Oh Ain't Modern Society Awful?</h4>
+                                <span>You've swallowed a planet! It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'!</span>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+                        <div class="expPreview expPreviewPad">
+                            <div class="listChart" id="expand1">
+                                <div class="rangeSelectWrap rsCtrShift">
+                                    <span class="rsSelectLabel">year</span>
+                                    <select name="rsYear" class="rsYear rangeSelect spoSelect">
+                                        <option value ="select" selected>2011</option>
+                                        <option value ="2012">2012</option>
+                                        <option value ="2013">2013</option>
+                                    </select>
+                                    <div class="clr"></div>    
+                                </div>
+                                    <div class="ipChr">
+                                        <div class="ipChr1"><span class="expExpItem"><i class="fa fa-plus-circle"></i>bear claw</a></span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                        <div class="ipChr2">
+                                            <div><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>toffee biscuit</a></span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                            <div><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>brownie</a></span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="ipChr">
+                                        <div class="ipChrInActive"><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>icing powder cake</span><span class="smGraphIcon"></span><span class="ipChrNum">N/A</span></div>
+                                    </div>
+                                    <div class="ipChr">
+                                        <div class="ipChr1"><span class="expExpItem"><i class="fa fa-plus-circle"></i>ice cream</span><span class="smGraphIcon"></span><span class="ipChrNum">292,244</span></div>
+                                        <div class="ipChr2">
+                                            <div><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>cake wafer</a></span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="ipChr">
+                                        <div class="ipChr1"><span class="expExpItem"><i class="fa fa-plus-circle"></i>pudding fruitcake</span><span class="smGraphIcon"></span><span class="ipChrNum">111,355,7</span></div>
+                                        <div class="ipChr2">
+                                            <div><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>bear claw</a></span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                            <div><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>chocolate</a></span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="ipChr">
+                                        <div class="ipChrInActive"><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>jelly beans</span><span class="smGraphIcon"></span><span class="ipChrNum">48,318</span></div>
+                                    </div>
+                            </div>
+                            <div class="listChart" id="expand2">
+                                <div class="rangeSelectWrap rsCtrShift">
+                                    <span class="rsSelectLabel">year</span>
+                                    <select name="rsYear" class="rsYear rangeSelect spoSelect">
+                                        <option value ="select" selected>2011</option>
+                                        <option value ="2012">2012</option>
+                                        <option value ="2013">2013</option>
+                                    </select>
+                                    <div class="clr"></div>    
+                                </div>                            
+                                    <div class="ipChr">
+                                        <div class="ipChr1"><span class="expExpItem"><i class="fa fa-plus-circle"></i>jelly-o muffin</span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                        <div class="ipChr2">
+                                            <div><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>sugar plum</a></span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="ipChr"><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>sesame snaps</span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                    <div class="ipChr"><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>croissant</span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expRow">
+                        <div class="expBlock">
+                            <div class="expThumb" data-num="3">
+                                <img src="images/cntimg03.jpg" alt="news 03" />
+                                <h4>Father Christmas</h4>
+                                <span>Or as I've always known him: Jeff. I hate yogurt. It's just stuff with bits in.</span>
+                            </div>
+                        </div>
+                        <div class="expBlock">
+                            <div class="expThumb" data-num="4">
+                                <img src="images/cntimg04.jpg" alt="news 04"/>
+                                <h4>Super squeaky bum time!</h4>
+                                <span>Saving the world with meals on wheels. You hate me; you want to kill me! Well, go on! Kill me! KILL ME! I am the last of my species, and I know how that weighs on the heart so don't lie to me!</span>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+                        <div class="expPreview expPreviewPad">
+                            <div class="listChart" id="expand3">
+                                <div class="rangeSelectWrap rsCtrShift">
+                                    <span class="rsSelectLabel">year</span>
+                                    <select name="rsYear" class="rsYear rangeSelect spoSelect">
+                                        <option value ="select" selected>2011</option>
+                                        <option value ="2012">2012</option>
+                                        <option value ="2013">2013</option>
+                                    </select>
+                                    <div class="clr"></div>    
+                                </div>                            
+                                    <div class="ipChr"><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>gummi bears</span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                    <div class="ipChr">
+                                        <div class="ipChr1"><span class="expExpItem"><i class="fa fa-plus-circle"></i>soufflé jelly</span><span class="smGraphIcon"></span><span class="ipChrNum">N/A</span></div>
+                                        <div class="ipChr2">
+                                            <div><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>chocolate</a></span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="ipChr"><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>tiramisu</span><span class="smGraphIcon"></span><span class="ipChrNum">292,244</span></div>
+                                    <div class="ipChr"><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>biscuit</span><span class="smGraphIcon"></span><span class="ipChrNum">111,355,7</span></div>
+                                    <div class="ipChr"><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>lollipop</span><span class="smGraphIcon"></span><span class="ipChrNum">48,318</span></div>
+                            </div>
+                            <div class="listChart" id="expand4">
+                                <div class="rangeSelectWrap rsCtrShift">
+                                    <span class="rsSelectLabel">year</span>
+                                    <select name="rsYear" class="rsYear rangeSelect spoSelect">
+                                        <option value ="select" selected>2011</option>
+                                        <option value ="2012">2012</option>
+                                        <option value ="2013">2013</option>
+                                    </select>
+                                    <div class="clr"></div>    
+                                </div>                            
+                                    <div class="ipChr"><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>candy canes</span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                    <div class="ipChr"><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>fruitcake</span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                                    <div class="ipChr"><span class="expExpItem expInActive"><i class="fa fa-plus-circle"></i>marzipan</span><span class="smGraphIcon"></span><span class="ipChrNum">7,394,685</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                
+                
+                
+                
+                <div class="sub_section" id="tabs_01">
+                <div class="rangeSelectWrap">
+                    <select name="rsMonth" class="rsMonth rangeSelect rsSelect">
+                        <option value ="select" selected>month</option>
+                        <option value ="Януари">january</option>
+                        <option value ="Февруари">february</option>
+                        <option value ="Март">march</option>
+                        <option value ="Април">april</option>
+                        <option value ="Май">may</option>
+                        <option value ="Юни">june</option>
+                        <option value ="Юли">july</option>
+                        <option value ="Август">august</option>
+                        <option value ="Септември">september</option>
+                        <option value ="Октомври">octomber</option>
+                        <option value ="Ноември">november</option>
+                        <option value ="Декември">december</option>
+                    </select>
+                    <select name="rsYear" class="rsYear rangeSelect rsSelect">
+                        <option value ="select" selected>2011</option>
+                        <option value ="text1">2012</option>
+                        <option value ="text2">2013</option>
+                    </select>
+                    <div class="clr"></div>    
+                </div>
+                    <!-- the tabs -->
+                <div id="tabs">
+                    <ul class="tabs">
+                        <li><a href="#tabs-1">sweet</a></li>
+                        <li><a href="#tabs-2">sugar</a></li>
+                    </ul> 
+                     
+                    <!-- tab "panes" -->
+                    <div class="panes">
+                        <div class="graph" id="tabs-1">
+                            <table cellpadding="0" cellspacing="0" border="0" class="graphTable oneCol">
+                                <tr>
+                                    <td valign="top" class="graphTab">
+                                        <div id="container10" style="height: 500px; width: 938px"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="tabAddInfo">
+                                <h1>Stop talking, brain thinking. Hush.</h1>
+                                <p>Heh-haa! Super squeaky bum time! It's a fez. I wear a fez now. Fezes are cool. The way I see it, every life is a pile of good things and bad things.…hey.…the good things don't always soften the bad things; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant.</p>
+                            </div>
+                        </div>
+                        <div class="graph" id="tabs-2">
+                            <table cellpadding="0" cellspacing="0" border="0" class="graphTable oneCol">
+                                <tr>
+                                    <td valign="top" class="graphTab">
+                                        <div id="container11" style="height: 500px; width: 938px"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="tabAddInfo">
+                                <h1>Stop talking, brain thinking. Hush.</h1>
+                                <p>Heh-haa! Super squeaky bum time! It's a fez. I wear a fez now. Fezes are cool. The way I see it, every life is a pile of good things and bad things.…hey.…the good things don't always soften the bad things; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="sub_section" id="tabs_01">
+                    <!-- the tabs -->
+                    <ul class="tabs">
+                        <li><a href="#">chocolate</a></li>
+                    </ul> 
+                     
+                    <!-- tab "panes" -->
+                    <div class="panes">
+                        <div class="graph">
+                            <table cellpadding="0" cellspacing="0" border="0" class="graphTable oneCol">
+                                <tr>
+                                    <td valign="top" class="graphTab">
+                                        <div id="container03" style="height: 500px; width: 938px"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                       
+            </div>
+
+            
+
+			<div id="examples">            
+
+
+                   
+            </div>
+             
+		</div> <!-- END MAIN -->
+        <div class="footWrap">
+            <div class="footer">
+                <span class="footCopy">2013 &copy; Tootsie roll apple pie</span>
+                <span class="footCredit">cheesecake : <a href="mailto:office@photocomma.com">office@photocomma.com</a> tel: 0888-654-321 | cheesecake by <a href="#" title="cheesecake by # ltd." target="_blank">### ltd.</a></span>
+            </div>
+        </div>
+	</body>
+</html>
