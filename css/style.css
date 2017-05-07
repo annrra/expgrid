@@ -5,10 +5,10 @@ body {
     /*font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;*/
     font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
     font-size: 13px;
-	margin: 0;
+    margin: 0;
     line-height: 160%;
     /*background: #f1f4f9;*/
-    background: #ccc; /*devv*/
+    background: #ccc; /*devv version01*/
 }
 a {
     color: #237dac;
