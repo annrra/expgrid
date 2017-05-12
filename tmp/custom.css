@@ -1,0 +1,37 @@
+.wrapper {
+    max-width: 70%;
+    margin: 0 auto;
+}
+.mainWrapper {
+    display: -webkit-flex;
+    display: flex;
+    /*-webkit-align-items: center;
+    align-items: center;*/
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content:         space-between;
+}
+.itemFB {
+    border: 1px dotted #ccc;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    flex: 0 1 10%;
+    /*
+    flex-grow - If all flex items have same value than all items have same size in the container / Default value: 0
+    flex-shrink - Determines how much the flex item will shrink relative to the rest of the flex items in the container / Default value: 1
+    flex-basis - This property takes the same values as the width and height properties, and specifies the initial main size of the flex item, before free space is distributed according to the flex factors / Default value: auto
+    */
+}
+.itemFB.itemFB01 {
+    order: 4;
+}
+.itemFB.itemFB02 {
+    order: 2;
+    flex: 0 1 30%;
+}
+.itemFB.itemFB03 {
+    order: 3;
+}
+.itemFB.itemFB04 {
+    order: 1;
+}
