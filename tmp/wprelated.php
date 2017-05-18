@@ -49,7 +49,7 @@ add_filter('contextual_help', 'geodirectory_help', 10, 3);
 
 
 /*********************************/
-/*Redirect to homepage after logout - works for buddypress and wp*/
+/*Redirect to homepage after logout - works for BuddyPress and wp*/
 add_action('wp_logout',create_function('','wp_redirect(home_url());exit();'));
 /*********************************/
 ?>
