@@ -35,3 +35,30 @@
 .itemFB.itemFB04 {
     order: 1;
 }
+
+
+/** to have images of same height in grid layout for example */
+/* item styles */
+.item-image {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 50%; /* here the desired aspect ratio */
+}
+.item-image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.item-content {
+  padding: 15px;
+  background: #72cffa;
+}
+.item-text {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+}
+/** to have images of same height in grid layout for example - end */
