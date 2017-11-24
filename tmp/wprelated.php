@@ -64,4 +64,48 @@ function register_user_menu() {
 /*Redirect to homepage after logout - works for BuddyPress and wp*/
 add_action('wp_logout',create_function('','wp_redirect(home_url());exit();'));
 /*********************************/
+
+
+
+/*********************************/
+/*Codestar framework parse typography properties*/
+//
+// Helper for Typography Parser
+// -------------------------------------
+function cs_typography_parser( $typography ) {
+
+  $out  = array();
+  $font = cs_get_option( $typography );
+
+  // family
+  $out['family'] = $font['family'];
+
+  // weight
+  $weight = preg_replace( '/\D/', '', $font['variant'] );
+  $out['weight'] = ( ! empty( $weight ) ) ? $weight : 'normal';
+
+  // style
+  $style = preg_replace( '/[0-9]/', '', $font['variant'] );
+  $out['style'] = ( ! empty( $style ) && $style !== 'regular' ) ? $style : 'normal';
+
+  return $out;
+}
+
+//
+// Embed Typography
+// -------------------------------------
+$font = cs_typography_parser( 'heading_fonts' );
+
+if( ! empty( $font ) ) {
+
+  echo 'h1,h2,h3,h4,h5,h6 {';
+
+    echo 'font-family:'. $font['family'] .';';
+    echo 'font-weight:'. $font['weight'] .';';
+    echo 'font-style:'. $font['style'] .';';
+
+  echo '}';
+
+}
+/*********************************/
 ?>
