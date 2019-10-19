@@ -49,24 +49,6 @@ add_filter('contextual_help', 'geodirectory_help', 10, 3);
 
 
 
-
-/*********************************/
-/*Add user menu*/
-add_action('init', 'register_user_menu'); 
-function register_user_menu() {
-    register_nav_menu('user_menu', __('User Menu'));
-}
-/*********************************/
-
-
-
-/*********************************/
-/*Redirect to homepage after logout - works for BuddyPress and wp*/
-add_action('wp_logout',create_function('','wp_redirect(home_url());exit();'));
-/*********************************/
-
-
-
 /*********************************/
 /*Codestar framework parse typography properties*/
 //
